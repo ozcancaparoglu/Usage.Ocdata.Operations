@@ -1,0 +1,43 @@
+version: '3.4'
+
+services:
+
+  appdbs:
+    container_name: appdbs
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=6wuvirmipwpdd4qnu
+      - POSTGRES_DB=CategoryDb
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  redisdb:
+    container_name: redisdb
+    restart: always
+    ports:
+      - "6379:6379"
+  
+  pgadmin:
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=test@test.com
+      - PGADMIN_DEFAULT_PASSWORD=Test.11
+    restart: always
+    ports:
+        - "5050:80"
+    volumes:
+      - pgadmin_data:/root/.pgadmin
+
+  usage.api:
+    container_name: usage.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:CategoryConnectionString=Server=appdbs;Port=5432;Database=CategoryDb;User Id=admin;Password=6wuvirmipwpdd4qnu"
+    ports:
+      - "8000:80"
+    depends_on:
+      - appdbs
+      - redisdb

@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  appdbs:
+    image: postgres:latest
+
+  redisdb:
+    image: redis:alpine
+
+  pgadmin:
+    image: dpage/pgadmin4
+  
+  usage.api:
+    image: ${DOCKER_REGISTRY-}usageapi
+    build:
+      context: .
+      dockerfile: Usage/Usage.Api/Dockerfile
+
+volumes:
+  postgres_data:
+  pgadmin_data:
