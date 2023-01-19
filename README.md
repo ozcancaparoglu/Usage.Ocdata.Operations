@@ -41,7 +41,7 @@ Migrations are written already.
 
 If all goes well you can reach project;
 
-**Usage.Api** => http://localhost:8000/swagger/index
+**Usage.Api** => http://localhost:8000/swagger/index.html
 
 ## Notes
 
@@ -54,5 +54,5 @@ docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
 
 this will just reevalute usage.api container and you are good to go with;
 
-http://localhost:8000/swagger/index on your browser.
+http://localhost:8000/swagger/index.html on your browser.
 
