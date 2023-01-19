@@ -19,19 +19,19 @@ docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
 ```
 3) On your browser go to http://localhost:5050 to open PgAdmin
   
-  Username = test@test.com
+      Username = test@test.com
   
-  Password = Test.11
+      Password = Test.11
 
 4) After the login;
   
-  Add New Server -> General Name = Whatever you want
+      Add New Server -> General Name = Whatever you want
   
-  Connection Tab -> Host = appdbs
+      Connection Tab -> Host = appdbs
   
-  Username = admin
+      Username = admin
   
-  Password = 6wuvirmipwpdd4qnu
+      Password = 6wuvirmipwpdd4qnu
 
 5) Open Package Manager Console in project and select Usage.Domain enter the command below
 ```csharp
@@ -39,7 +39,7 @@ Update-Database
 ```
 Migrations are written already.
 
-If all goes well you good to go;
+If all goes well you can reach project;
 
 **Usage.Api** => http://localhost:8000/swagger/index
 
