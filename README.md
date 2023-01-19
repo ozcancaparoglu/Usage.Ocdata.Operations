@@ -18,15 +18,14 @@ You will need the following tools:
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
 ```
 3) On your browser go to http://localhost:5050 to open PgAdmin
-
-Username = test@test.com
-Password = Test.11
+  Username = test@test.com
+  Password = Test.11
 
 4) After the login;
-*Add New Server -> General Name = Whatever you want
-*Connection Tab -> Host = appdbs
-*Username = admin
-*Password = 6wuvirmipwpdd4qnu
+  Add New Server -> General Name = Whatever you want
+  Connection Tab -> Host = appdbs
+  Username = admin
+  Password = 6wuvirmipwpdd4qnu
 
 5) Open Package Manager Console in project and select Usage.Domain enter the command below
 ```csharp
