@@ -18,13 +18,19 @@ You will need the following tools:
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
 ```
 3) On your browser go to http://localhost:5050 to open PgAdmin
+  
   Username = test@test.com
+  
   Password = Test.11
 
 4) After the login;
+  
   Add New Server -> General Name = Whatever you want
+  
   Connection Tab -> Host = appdbs
+  
   Username = admin
+  
   Password = 6wuvirmipwpdd4qnu
 
 5) Open Package Manager Console in project and select Usage.Domain enter the command below
@@ -39,10 +45,14 @@ If all goes well you good to go;
 
 ## Notes
 
-- After the 2. step docker will give error and usage.api container will not be working. When step 5 finishes delete the container and image and rerun the command
+- After the 2. step docker will give error and usage.api container will not be working. 
+
+- When step 5 finishes delete the container and image and rerun the command
 ```csharp
 docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
 ```
+
 this will just reevalute usage.api container and you are good to go with;
+
 http://localhost:8000/swagger/index on your browser.
 
