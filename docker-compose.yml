@@ -14,7 +14,7 @@ services:
     image: ${DOCKER_REGISTRY-}usageapi
     build:
       context: .
-      dockerfile: Usage/Usage.Api/Dockerfile
+      dockerfile: src/Usage.Api/Dockerfile
 
 volumes:
   postgres_data:
