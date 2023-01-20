@@ -1,6 +1,5 @@
 # Usage.Ocdata.Operations
 Example of using nuget package Ocdata.Operations
-# PhoneBook
 
 ## Run The Project
 You will need the following tools:
